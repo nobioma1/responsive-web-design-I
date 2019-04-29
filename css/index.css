@@ -199,6 +199,51 @@ main img {
   }
 }
 
+.services-section {
+  flex-direction: column;
+}
+
+.box-container {
+  flex-wrap: wrap;
+}
+
+.box {
+  width: calc(98% / 2);
+	border: 1px solid black;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: rgb(233, 232, 232);
+}
+
+.box p {
+	margin-bottom: 20px;
+}
+
+.box a {
+	padding: 5px 25px;
+	text-decoration: none;
+	font-size: 12px;
+	color: black; 
+	border: 1px solid black;
+	border-radius: 5px;
+	background: white;
+}
+
+@media(max-width: 500px) {
+  .box {
+    width: 100%;
+  }
+}
+
+.more-facts-container .more-facts ul {
+	padding: 10px 0 10px 20px;
+	list-style-type: square;
+}
+
+.more-facts-container .more-facts li {
+	padding: 8px 0;
+}
+
 .contact address p{
   padding-bottom: 10px;
 }
