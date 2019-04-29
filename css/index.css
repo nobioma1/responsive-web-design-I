@@ -1,3 +1,254 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* a desktop first approach */
+:root {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 61%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 100%;
+    padding: 5px 5%;
+  }
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.top-bar nav a {
+  text-decoration: none;
+  color: gray;
+  padding-right: 45px;
+}
+
+@media (max-width: 800px) {
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .logo-link {
+    order: -1;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-bar nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .top-bar nav a {
+    border-bottom: 1px solid gray;
+    padding: 8px 50% 8px 50%;
+  }
+
+  .top-bar nav a:first-child {
+    border-top: 1px solid gray;    
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 7% 0;
+}
+
+.header-container header {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container header h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.header-container header a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 50px;
+}
+
+@media (max-width: 800px) {
+  .header-container img {
+    display: none;
+  }
+
+  .header-container header {
+    width: 100%;
+  }
+
+  .header-container header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+}
+
+.bottom-border {
+  border-bottom: 2px solid black;
+}
+
+section {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-top {
+  width: calc(98% / 2);
+}
+
+main img {
+  width: 100%;
+}
+
+.content-bottom {
+  width: calc(98% / 3);
+  padding-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  section {
+    flex-direction: column;
+  }
+
+  .content-top, .content-bottom {
+    width: 100%;
+  }
+}
+
+.services-section {
+  flex-direction: column;
+}
+
+.box-container {
+  flex-wrap: wrap;
+}
+
+.box {
+  width: calc(98% / 2);
+	border: 1px solid black;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: rgb(233, 232, 232);
+}
+
+.box p {
+	margin-bottom: 20px;
+}
+
+.box a {
+	padding: 5px 25px;
+	text-decoration: none;
+	font-size: 12px;
+	color: black; 
+	border: 1px solid black;
+	border-radius: 5px;
+	background: white;
+}
+
+@media(max-width: 500px) {
+  .box {
+    width: 100%;
+  }
+}
+
+.more-facts-container .more-facts ul {
+	padding: 10px 0 10px 20px;
+	list-style-type: square;
+}
+
+.more-facts-container .more-facts li {
+	padding: 8px 0;
+}
+
+.contact address p{
+  padding-bottom: 10px;
+}
+
+footer p {
+  text-align: center;
+  padding: 15px 0;
+}
